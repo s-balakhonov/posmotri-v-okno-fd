@@ -63,6 +63,16 @@ ol {
   width: 711px;
 }
 
+.result__video-container {
+  height: 386px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  object-fit: contain; /* должно занимать всю ширину и высоту */
+}
+
 .content__details {
   width: 399px;
 }
@@ -81,6 +91,32 @@ ol {
 .content__list-container {
   height: 298px;
   margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   overflow-y: scroll;
    /* добавить скролл при переполнении, скрывать не нужно */
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
+.content__video-card-thumbnail {
+  height: 103px;
+  min-width: 194px;
+  object-fit: contain;
+  object-position: center;
 }
