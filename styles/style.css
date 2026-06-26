@@ -149,7 +149,7 @@ ol {
   gap: 15px;
 }
 
-.search-form__checkbox:checked .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
   opacity: 1;
   /* TODO: разобраться с отмеченным чекбоксом */
 }
