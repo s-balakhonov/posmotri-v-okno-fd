@@ -299,22 +299,19 @@ ol {
 
 .content__video-card-title {
   margin-bottom: 6px;
-  /* display: -webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  overflow: hidden; */
+  overflow: hidden;
   font-family: Oswald;
-  font-weight: 700;
   font-size: 30px;
+  font-weight: 700;
   text-transform: uppercase;
-  line-clamp: 1;
-  /* TODO: нужно учесть переполнение и заменять на ... */
 }
 
 .content__video-card-description {
-  /* line-clamp: TODO: учесть переполнение и заменять на...; */
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-family: inherit;
