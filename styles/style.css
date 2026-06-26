@@ -116,6 +116,10 @@ ol {
   cursor: pointer;
 }
 
+.search-form__label:has(.search-form__textfield) {
+  text-decoration: none;
+}
+
 .search-form__textfield {
   width: 225px;
   border-top: 1px solid #fff;
@@ -135,14 +139,18 @@ ol {
   color: rgb(255 255 255 / 0.7);
 }
 
-.search-form__textfield::placeholder:hover {
+.search-form__textfield:hover::placeholder {
   text-decoration: none;
 }
 
 .search-form__textfield:hover {
   text-decoration: none;
   cursor: text;
-  /* TODO: не работает отмена подчеркивания при наведении, разобраться */
+}
+
+.search-form__textfield:focus,
+.search-form__textfield:focus-visible {
+  outline: none;
 }
 
 .search-form__checkbox-list {
