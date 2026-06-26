@@ -135,17 +135,17 @@ ol {
   line-height: 22px;
 }
 
+.search-form__textfield:hover {
+  text-decoration: none;
+  cursor: text;
+}
+
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
 }
 
 .search-form__textfield:hover::placeholder {
   text-decoration: none;
-}
-
-.search-form__textfield:hover {
-  text-decoration: none;
-  cursor: text;
 }
 
 .search-form__textfield:focus,
@@ -157,11 +157,6 @@ ol {
   display: flex;
   gap: 15px;
   width: fit-content;
-}
-
-.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
-  opacity: 1;
-  /* TODO: разобраться с отмеченным чекбоксом */
 }
 
 .search-form__pseudo-checkbox {
@@ -178,6 +173,10 @@ ol {
   height: 100%;
   background-color: #fff;
   opacity: 0;
+}
+
+.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
+  opacity: 1;
 }
 
 .button {
