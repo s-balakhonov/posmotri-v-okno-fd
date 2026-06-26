@@ -102,7 +102,6 @@ ol {
   align-items: center;
   width: fit-content;
   gap: 5px;
-  width: 100%;
 }
 
 .search-form__label:has(:focus-visible) {
