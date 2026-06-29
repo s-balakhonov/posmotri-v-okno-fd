@@ -88,21 +88,22 @@ ol {
 
 .search-form__fieldset {
   border: none;
-  width: 100%;
+  width: fit-content;
 }
 
 .search-form__fieldset-title {
   margin-bottom: 5px;
   font-size: inherit;
   font-weight: 400;
+  width: fit-content;
 }
 
 .search-form__label {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   width: fit-content;
   gap: 5px;
-  width: 100%;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -115,8 +116,12 @@ ol {
   cursor: pointer;
 }
 
+.search-form__label:has(.search-form__textfield) {
+  text-decoration: none;
+}
+
 .search-form__textfield {
-  width: 100%;
+  width: 225px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-left: none;
@@ -130,28 +135,28 @@ ol {
   line-height: 22px;
 }
 
+.search-form__textfield:hover {
+  text-decoration: none;
+  cursor: text;
+}
+
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
 }
 
-.search-form__textfield::placeholder:hover {
+.search-form__textfield:hover::placeholder {
   text-decoration: none;
 }
 
-.search-form__textfield:hover {
-  text-decoration: none;
-  cursor: text;
-  /* TODO: не работает отмена подчеркивания при наведении, разобраться */
+.search-form__textfield:focus,
+.search-form__textfield:focus-visible {
+  outline: none;
 }
 
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-}
-
-.search-form__checkbox:checked .search-form__pseudo-checkbox::after {
-  opacity: 1;
-  /* TODO: разобраться с отмеченным чекбоксом */
+  width: fit-content;
 }
 
 .search-form__pseudo-checkbox {
@@ -168,6 +173,10 @@ ol {
   height: 100%;
   background-color: #fff;
   opacity: 0;
+}
+
+.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
+  opacity: 1;
 }
 
 .button {
@@ -290,22 +299,19 @@ ol {
 
 .content__video-card-title {
   margin-bottom: 6px;
-  /* display: -webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  overflow: hidden; */
+  overflow: hidden;
   font-family: Oswald;
-  font-weight: 700;
   font-size: 30px;
+  font-weight: 700;
   text-transform: uppercase;
-  line-clamp: 1;
-  /* TODO: нужно учесть переполнение и заменять на ... */
 }
 
 .content__video-card-description {
-  /* line-clamp: TODO: учесть переполнение и заменять на...; */
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-family: inherit;
