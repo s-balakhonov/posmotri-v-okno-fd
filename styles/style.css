@@ -57,7 +57,7 @@ ol {
   display: flex;
   align-items: flex-end;
   gap: 30px;
-  height: 534px;
+  height: fit-content;
 }
 
 .result {
@@ -178,7 +178,8 @@ ol {
 }
 
 .button {
-  height: 34px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   border: 1px solid #fff;
   background-color: transparent;
   color: inherit;
@@ -206,21 +207,21 @@ ol {
 }
 
 .search-form__submit-button {
-  width: 194px;
+  min-width: 194px;
   align-self: flex-end;
 }
 
 .more-button {
   width: 100%;
-  flex-shrink: 0;
 }
 
 .content__details {
   height: 100%;
+  max-width: 399px;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 75px;
@@ -239,8 +240,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .content__list {
@@ -288,15 +288,16 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .content__video-card-title {
   margin-bottom: 6px;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  line-height: 1;
   overflow: hidden;
-  font-family: Oswald;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
